@@ -11,7 +11,7 @@ describe Bank do
 
 	describe '#deposit' do
 		it 'should change the balance of the account' do
-			expect{ subject.deposit(200) }.to change{ subject.balance }
+			expect{ subject.deposit(200) }.to change{ subject.balance }.by(200)
 		end
 	end
 end
