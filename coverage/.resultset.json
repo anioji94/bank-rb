@@ -3,6 +3,7 @@
     "coverage": {
       "/Users/aniruddh/Projects/Makers/Week-10/bank-rb/spec/bank_spec.rb": {
         "lines": [
+          null,
           1,
           null,
           1,
@@ -53,6 +54,7 @@
       },
       "/Users/aniruddh/Projects/Makers/Week-10/bank-rb/lib/bank.rb": {
         "lines": [
+          null,
           1,
           1,
           null,
@@ -79,7 +81,6 @@
           null,
           null,
           1,
-          2,
           2,
           2,
           2,
@@ -101,6 +102,6 @@
         ]
       }
     },
-    "timestamp": 1617816932
+    "timestamp": 1617817865
   }
 }

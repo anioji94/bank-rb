@@ -1,3 +1,4 @@
+# frozen_string_literal: false
 class Bank
   attr_reader :balance, :dep_amount, :with_amount, :history
 
@@ -24,7 +25,6 @@ class Bank
   end
 
   def withdraw(amount)
-    @dep_amount = ''
     @balance -= amount.to_f
     @with_amount = format '%.2f', amount
     save('', @with_amount, @balance)
