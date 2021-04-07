@@ -33,7 +33,7 @@ private
 
 	def save(dep_amount = "", with_amount = "", balance = @balance, time = @time)
 		transaction = " #{time} || #{dep_amount} || #{with_amount} || #{sprintf "%.2f", balance} "
-		@history << transaction
+		@history.unshift(transaction)
 	end
 
 	def write_statement

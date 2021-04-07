@@ -12,7 +12,7 @@ describe Bank do
 		context'when a deposit is made' do
 			it 'should store deposit amount' do
 				subject.deposit(200)
-				expect{ subject.print_statement }.to output("date || credit || debit || balance\n #{time} ||  ||  || 0.00 \n #{time} || 200.00 ||  || 200.00 \n").to_stdout
+				expect{ subject.print_statement }.to output("date || credit || debit || balance\n #{time} || 200.00 ||  || 200.00 \n #{time} ||  ||  || 0.00 \n").to_stdout
 			end
 		end
 
@@ -20,7 +20,7 @@ describe Bank do
 			it 'should store withdrawal amount' do
 				subject.deposit(200)
 				subject.withdraw(10)
-				expect{ subject.print_statement }.to output("date || credit || debit || balance\n #{time} ||  ||  || 0.00 \n #{time} || 200.00 ||  || 200.00 \n #{time} ||  || 10.00 || 190.00 \n").to_stdout
+				expect{ subject.print_statement }.to output("date || credit || debit || balance\n #{time} ||  || 10.00 || 190.00 \n #{time} || 200.00 ||  || 200.00 \n #{time} ||  ||  || 0.00 \n").to_stdout
 			end
 		end
 	end
