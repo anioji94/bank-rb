@@ -13,6 +13,7 @@ class Bank
 	def print_statement
 		write_statement
 		puts "date || credit || debit || balance\n" + @statement
+		@statement = ""
 	end
 
 	def deposit(amount)
