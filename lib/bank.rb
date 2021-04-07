@@ -1,5 +1,5 @@
 class Bank
-	attr_reader :balance
+	attr_reader :balance, :dep_amount, :with_amount
 	def initialize
 		@balance = 0.00
 		@dep_amount = ""
