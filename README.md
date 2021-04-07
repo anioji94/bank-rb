@@ -25,6 +25,7 @@ $ ruby -v
 3. Git clone this repo!
 4. In the same directory as the repo, make sure you run the following:
 ```
+bundle install # this will install all required gems for testing
 irb -r './lib/bank.rb'
 ```
 5. Initalise a new instance of your bank
