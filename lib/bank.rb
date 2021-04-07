@@ -6,6 +6,7 @@ class Bank
 		@with_amount = ""
 		@history = []
 		@statement = ""
+		@time = "#{Time.now.day}/#{Time.now.month}/#{Time.now.year}"
 		save
 	end
 
@@ -29,8 +30,8 @@ class Bank
 
 private 
 
-	def save(dep_amount = "", with_amount = "", balance = @balance)
-		transaction = "  || #{dep_amount} || #{with_amount} || #{sprintf "%.2f", balance} "
+	def save(dep_amount = "", with_amount = "", balance = @balance, time = @time)
+		transaction = " #{time} || #{dep_amount} || #{with_amount} || #{sprintf "%.2f", balance} "
 		@history << transaction
 	end
 
@@ -39,4 +40,8 @@ private
 			@statement += "#{transaction}\n"
 		end
 	end
+
+	
+		
+	
 end
