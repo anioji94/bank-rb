@@ -4,14 +4,14 @@ describe Bank do
 	describe '#print' do
 		context 'when no withdrawals or deposits have been made' do
 			it 'should print an empty statement' do
-				expect{ subject.print }.to output("date || credit || debit || balance\n ||  ||  || 0.00 \n").to_stdout
+				expect{ subject.print_statement }.to output("date || credit || debit || balance\n  ||  ||  || 0.00 \n").to_stdout
 			end
 		end
 		
 		context'when a deposit is made' do
 			it 'should store deposit amount' do
 				subject.deposit(200)
-				expect{ subject.print }.to output("date || credit || debit || balance\n || 200.00 ||  || 200.00 \n").to_stdout
+				expect{ subject.print_statement }.to output("date || credit || debit || balance\n  ||  ||  || 0.00 \n  || 200.00 ||  || 200.00 \n").to_stdout
 			end
 		end
 
@@ -19,7 +19,7 @@ describe Bank do
 			it 'should store withdrawal amount' do
 				subject.deposit(200)
 				subject.withdraw(10)
-				expect{ subject.print }.to output("date || credit || debit || balance\n ||  || 10.00 || 190.00 \n").to_stdout
+				expect{ subject.print_statement }.to output("date || credit || debit || balance\n  ||  ||  || 0.00 \n  || 200.00 ||  || 200.00 \n  ||  || 10.00 || 190.00 \n").to_stdout
 			end
 		end
 	end
