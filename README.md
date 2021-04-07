@@ -1,5 +1,20 @@
 # Bank Tech Test in Ruby
 
+## What does this program do?
+This program is a basic command line banking app that will help you keep on top of your finances!
+Here is what a common output would look like:
+```
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
+```
+As you can see from the above output, the client has deposited 1000 pounds on the 10th of Jan 2012.
+Then three days later, a further 2000 pounds was deposited.
+On the 14th, a 500 pound withdrawal was made leaving 2500 in the account.
+This program is a way to track deposits and withdrawals alongside the date of each action!
+
+
 ## How to use this program
 1. Make sure you have Ruby installed on your computer!
 2. Open up your terminal and type in the following to confirm:
