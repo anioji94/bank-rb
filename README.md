@@ -27,6 +27,24 @@ $ ruby -v
 ```
 irb -r './lib/bank.rb'
 ```
+5. Initalise a new instance of your bank
+```
+my_bank = Bank.new
+```
+6. Make a deposit or a withdrawal (the overdraft limit is infinite!)
+```
+my_bank.deposit(1000)
+my_bank.withdraw(50)
+```
+7. Print your statement to check on your finances!
+```
+my_bank.print_statement 
+#=>
+date || credit || debit || balance
+7/7/2021 ||  || 50.00 || 950.00
+7/7/2021 || 1000.00 ||  || 1000.00
+```
+That's it! Take a look at the User Stories below to see how I planned this program.
 
 
 ## User Stories 
