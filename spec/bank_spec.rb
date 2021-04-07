@@ -14,6 +14,14 @@ describe Bank do
 				expect{ subject.print }.to output("date || credit || debit || balance\n || 200.00 ||  || 200.00 \n").to_stdout
 			end
 		end
+
+		context'when a withdrawal is made' do
+			it 'should store withdrawal amount' do
+				subject.deposit(200)
+				subject.withdraw(10)
+				expect{ subject.print }.to output("date || credit || debit || balance\n ||  || 10.00 || 190.00 \n").to_stdout
+			end
+		end
 	end
 
 	describe '#deposit' do
